@@ -1,0 +1,4 @@
+sphinxcontrib-apidoc
+numpy
+matplotlib
+isort
