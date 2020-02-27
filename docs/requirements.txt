@@ -1,4 +1,5 @@
 sphinxcontrib-apidoc
 numpy
+scipy
 matplotlib
 isort
