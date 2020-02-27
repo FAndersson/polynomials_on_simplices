@@ -14,7 +14,7 @@ domains.
 
 | `Polynomials <#polynomials>`__
 | `Piecewise polynomials <#piecewise-polynomials>`__
-| `Package structure <#package-structure>`__
+| `Repository structure <#repository-structure>`__
 
 Polynomials
 -----------
