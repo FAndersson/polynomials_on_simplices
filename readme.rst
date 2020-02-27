@@ -32,8 +32,8 @@ arbitrary r and m. Available functionality includes:
 -  Generation of Latex strings.
 -  Vector valued polynomials.
 
-See the reference documentation for the full set of functionality. TODO:
-Add link.
+See the reference documentation for the full set of functionality,
+https://polynomials-on-simplices.readthedocs.io/en/latest/.
 
 Basic examples
 ~~~~~~~~~~~~~~
