@@ -1,6 +1,8 @@
 Polynomials on simplices
 ========================
 
+https://github.com/FAndersson/polynomials_on_simplices/workflows/Unit%20tests/badge.svg
+
 A Python package for polynomials and piecewise polynomials on simplicial
 domains.
 
