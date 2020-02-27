@@ -1,0 +1,18 @@
+name: Slow unit tests
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  unittest_slow:
+    runs-on: ubuntu-latest
+    container:
+      image: fredrikandersson/debian-stable-python-image:stable-2019-12-24
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Tests with pytest
+      run: |
+        cd ci
+        chmod 777 unittests_run_all_slow.sh
+        './unittests_run_all_slow.sh'

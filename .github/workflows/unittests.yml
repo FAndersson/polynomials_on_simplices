@@ -1,0 +1,16 @@
+name: Unit tests
+on: [push]
+
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    container:
+      image: fredrikandersson/debian-stable-python-image:stable-2019-12-24
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Tests with pytest
+      run: |
+        cd ci
+        chmod 777 unittests_run_all_regular.sh
+        './unittests_run_all_regular.sh'
