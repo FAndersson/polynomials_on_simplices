@@ -1,0 +1,15 @@
+# Python precompiled files
+*.pyc
+
+# PyCharm files
+.idea/*
+
+# Pytest cache
+.pytest_cache
+
+# Generated documentation
+docs/generated_documentation
+
+# Package setup directories
+build
+dist
