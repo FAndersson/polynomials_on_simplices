@@ -1,0 +1,8 @@
+[flake8]
+exclude = elasticity/.old_koiter_shell
+; E741: do not use variables named ‘l’, ‘O’, or ‘I’. Sometimes it's logical to use 'l' as variable name
+;       even if it's easily confused with '1'.
+; W503: line break occurred before a binary operator. This warning is ignored in the default configuration,
+;       but we need to re-add it here since we are not using the default setup.
+ignore = E741, W503
+max-line-length = 125
