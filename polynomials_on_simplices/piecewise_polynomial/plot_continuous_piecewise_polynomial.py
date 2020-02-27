@@ -28,7 +28,7 @@ def plot_bivariate_continuous_piecewise_polynomial(p, *args, **kwargs):
     unique = (fig is None)
     if fig is None:
         fig = plt.figure()
-    edge_resolution = kwargs.pop("edge_resolution", 15)
+    edge_resolution = kwargs.pop("edge_resolution", 50)
     triangles = triangle_mesh_triangulation(p.triangles, edge_resolution)
     vertices = triangle_mesh_vertices(p.triangles, p.vertices, edge_resolution)
     vertices = embed_point_cloud_in_rn(vertices, 3)

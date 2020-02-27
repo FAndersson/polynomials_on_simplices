@@ -31,7 +31,7 @@ def plot_univariate_piecewise_polynomial(p, *args, **kwargs):
     unique = (fig is None)
     if fig is None:
         fig = plt.figure()
-    edge_resolution = kwargs.pop("edge_resolution", 15)
+    edge_resolution = kwargs.pop("edge_resolution", 50)
     t = np.linspace(0, 1, edge_resolution)
     c = kwargs.pop("color", np.random.rand(3))
 
@@ -74,7 +74,7 @@ def plot_bivariate_piecewise_polynomial(p, *args, **kwargs):
     unique = (fig is None)
     if fig is None:
         fig = plt.figure()
-    edge_resolution = kwargs.pop("edge_resolution", 15)
+    edge_resolution = kwargs.pop("edge_resolution", 50)
     triangles = triangle_triangulation(edge_resolution)
     c = np.random.rand(3)
 

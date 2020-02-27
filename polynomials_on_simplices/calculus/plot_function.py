@@ -76,7 +76,7 @@ def plot_bivariate_function(f, tri_vertices, *args, **kwargs):
         :func:`~polynomials_on_simplices.visualization.plot_triangles.plot_triangle_mesh` command.
     """
     # Generate discretization of the triangle
-    edge_resolution = kwargs.pop("edge_resolution", 10)
+    edge_resolution = kwargs.pop("edge_resolution", 50)
     triangles = triangle_triangulation(edge_resolution)
     vertices = general_triangle_vertices(tri_vertices, edge_resolution)
     # Add third column for z-values
