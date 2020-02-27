@@ -5,6 +5,10 @@ Polynomials on simplices
 :target: https://github.com/FAndersson/polynomials_on_simplices/actions?query=workflow%3A%22Unit+tests%22
 :alt: Unit tests Status
 
+.. image:: https://readthedocs.org/projects/polynomials-on-simplices/badge/?version=latest
+:target: https://polynomials-on-simplices.readthedocs.io/en/latest/?badge=latest
+:alt: Documentation Status
+
 A Python package for polynomials and piecewise polynomials on simplicial
 domains.
 
