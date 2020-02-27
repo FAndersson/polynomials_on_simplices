@@ -72,9 +72,9 @@ def plot_bivariate_function(f, tri_vertices, *args, **kwargs):
     :param kwargs: Additional keyword arguments passed to the plot command.
     """
     # Generate discretization of the triangle
-    edge_res = 10
-    triangles = triangle_triangulation(edge_res)
-    vertices = general_triangle_vertices(tri_vertices, edge_res)
+    edge_resolution = kwargs.pop("edge_resolution", 10)
+    triangles = triangle_triangulation(edge_resolution)
+    vertices = general_triangle_vertices(tri_vertices, edge_resolution)
     # Add third column for z-values
     vertices = np.concatenate((vertices, np.zeros((len(vertices), 1))), axis=1)
     # Compute z-values
