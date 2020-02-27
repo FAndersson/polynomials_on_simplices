@@ -17,8 +17,8 @@ def plot_function(f, x_start=0.0, x_stop=1.0, *args, **kwargs):
     :type f: Callable f(x)
     :param float x_start: Beginning of x-range to plot.
     :param float x_stop: End of x-range to plot.
-    :param args: Additional arguments passed to the plot_sympy_curve command.
-    :param kwargs: Keyword arguments passed to the plot_sympy_curve command.
+    :param args: Additional arguments passed to the :func:`plot_curve` command.
+    :param kwargs: Keyword arguments passed to the :func:`plot_curve` command.
     """
     def g(x):
         return [x, f(x)]
@@ -51,9 +51,10 @@ def plot_curve(gamma, t_start=0.0, t_stop=1.0, *args, **kwargs):
     :type gamma: Callable :math:`\gamma(t)`
     :param float t_start: Beginning of range to plot for the curve parameter t.
     :param float t_stop: End of range to plot for the curve parameter t.
-    :param args: Additional arguments passed to the plot_curve command.
+    :param args: Additional arguments passed to the :func:`~polynomials_on_simplices.visualization.plot_lines.plot_curve`
+        command.
     :param kwargs: Keyword arguments. 'num': Number of discrete points in the plot. Further keyword arguments are
-        passed to the plot_curve command.
+        passed to the :func:`~polynomials_on_simplices.visualization.plot_lines.plot_curve` command.
     """
     num = kwargs.pop("num", 50)
     t = np.linspace(t_start, t_stop, num=num)
@@ -68,8 +69,11 @@ def plot_bivariate_function(f, tri_vertices, *args, **kwargs):
     :param f: Bivariate function to plot (bivariate real-valued function).
     :type f: Callable f(x, y)
     :param tri_vertices: Vertices of the triangular domain (3 by 2 matrix where each row is a vertex in the triangle).
-    :param args: Additional arguments passed to the plot command.
-    :param kwargs: Additional keyword arguments passed to the plot command.
+    :param args: Additional arguments passed to the
+        :func:`~polynomials_on_simplices.visualization.plot_triangles.plot_triangle_mesh` command.
+    :param kwargs: 'edge_resolution': Number of discrete points in the plot along each edge in the triangle mesh.
+        Further keyword arguments are passed to the
+        :func:`~polynomials_on_simplices.visualization.plot_triangles.plot_triangle_mesh` command.
     """
     # Generate discretization of the triangle
     edge_resolution = kwargs.pop("edge_resolution", 10)
