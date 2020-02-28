@@ -198,6 +198,11 @@ def affine_transformation_from_unit(vertices):
         return a, b
     b = vertices[0]
     a = np.empty((m, n))
+    # Vertices data structure need to support subtraction of rows (vertices)
+    try:
+        vertices[1] - vertices[0]
+    except TypeError:
+        vertices = np.array(vertices)
     for i in range(n):
         a[:, i] = vertices[i + 1] - vertices[0]
     return a, b
@@ -310,7 +315,9 @@ def signed_volume(vertices):
     # Compute parallelepiped spanned by the simplex vertices
     p = np.empty((n, n))
     # Vertices data structure need to support subtraction of rows (vertices)
-    if not isinstance(vertices, np.ndarray):
+    try:
+        vertices[1] - vertices[0]
+    except TypeError:
         vertices = np.array(vertices)
     for i in range(n):
         p[:, i] = vertices[i + 1] - vertices[0]

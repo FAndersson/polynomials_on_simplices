@@ -193,6 +193,26 @@ class TestAffineTransformation(unittest.TestCase):
         self.assertTrue(np.array_equal(expected_a, a))
         self.assertTrue(np.array_equal(expected_b, b))
 
+    def test_list_simplex(self):
+        vertices = [[1], [3]]
+        a, b = affine_transformation_to_unit(vertices)
+        self.assertTrue(0.5, a)
+        self.assertEqual(-0.5, b)
+
+        vertices = [
+            [0, 0],
+            [2, 0],
+            [0, 2]
+        ]
+        a, b = affine_transformation_to_unit(vertices)
+        expected_a = np.array([
+            [0.5, 0.0],
+            [0.0, 0.5]
+        ])
+        expected_b = np.zeros(2)
+        self.assertTrue(np.array_equal(expected_a, a))
+        self.assertTrue(np.array_equal(expected_b, b))
+
     def test_affine_transformation_to_higher_dimensional_space(self):
         # Test affine map from the n-dimensional unit simplex to an n-dimensional simplex in R^m, m > n.
 
