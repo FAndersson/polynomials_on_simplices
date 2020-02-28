@@ -247,6 +247,8 @@ def general_triangle_vertices(tri_vertices, edge_resolution=3):
     :param edge_resolution: Number of vertices along each edge of the triangle.
     :return: n by 3 or n by 2 list of vertices (depending on the shape of the input triangle vertices).
     """
+    if not isinstance(tri_vertices, np.ndarray):
+        tri_vertices = np.array(tri_vertices)
     dim = tri_vertices.shape[1]
     num_vertices = int(edge_resolution * (edge_resolution + 1) / 2)
     vertices = np.empty((num_vertices, dim))
